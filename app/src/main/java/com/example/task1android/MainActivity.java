@@ -1,12 +1,15 @@
 package com.example.task1android;
-
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,5 +23,11 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void OnBtnChangeTextClick(View view) {
+        TextView tvTextChange = (TextView)findViewById(R.id.TextChange);
+        tvTextChange.setText("Congrads! You did it");
+        tvTextChange.setTextColor(Color.RED);
     }
 }
