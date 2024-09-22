@@ -9,7 +9,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.TextView;
-
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,5 +29,16 @@ public class MainActivity extends AppCompatActivity {
         TextView tvTextChange = (TextView)findViewById(R.id.TextChange);
         tvTextChange.setText("Congrads! You did it");
         tvTextChange.setTextColor(Color.RED);
+    }
+
+    public void OnBtnRandomClick(View view) {
+        TextView tvTextChange = (TextView)findViewById(R.id.TextChange);
+
+
+        Random random = new Random();
+        int randomColor = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+
+
+        tvTextChange.setTextColor(randomColor);
     }
 }
